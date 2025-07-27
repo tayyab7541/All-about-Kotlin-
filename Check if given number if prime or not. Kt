@@ -1,0 +1,16 @@
+fun main() 
+{
+	
+    var num : Int = 0
+    print("Enter number = ")
+    num= readLine()!!.toInt()
+    for(i in 2 .. num-1)
+    {
+    if(num%i==0)
+    {
+    println("The number entered is composite not prime")
+    return
+    }
+    }
+    print("$num is a prime number")
+}
