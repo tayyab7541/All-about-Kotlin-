@@ -1,0 +1,12 @@
+fun main() 
+{
+	
+    var number : Int= 0
+    var sum : Int = 0
+    print("Enter number (Only one or two digit) = ")
+    number = readLine()!!.toInt()
+    sum += number %10
+    sum+= number/10
+    
+    print(" sum = $sum")
+}
