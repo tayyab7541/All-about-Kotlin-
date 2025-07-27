@@ -1,0 +1,238 @@
+fun main() 
+{
+	var marks: Double=0.0
+    var cr : Int=0
+    var crsum:Int=0
+    var found : Boolean= true
+    var marksum: Double =0.0
+    var subjects : Int = 0
+    print("Enter number of subjects :")
+    subjects =readLine()!!.toInt()
+    for(i in 1.. subjects)
+    {
+       do
+       {
+       print("Enter marks of $i subject : ")
+       marks=readLine()!!.toDouble()
+       
+      print("Enter credit hours of $i subject : ")
+       cr=readLine()!!.toInt()
+       if(marks>=0&&marks<=100)
+       {
+       found =false
+       }
+       else
+       {
+       found = true
+       println("Enter valid marks")
+       }
+       }while(found)
+       
+       
+       if(marks>=80.0&&marks<=100.0)
+       {
+          crsum+=cr
+         marksum += 4.0*cr
+       }
+     else if(marks==79.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.9*cr
+       }
+      else if(marks==78.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.8*cr
+       }
+      else if(marks==77.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.7*cr
+       }
+      else if(marks==76.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.6*cr
+       }
+      else if(marks==75.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.5*cr
+       }
+      else if(marks==74.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.4*cr
+       }
+      else if(marks==73.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.3*cr
+       }
+      else if(marks==72.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.2*cr
+       }
+       
+      else if(marks==71.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.1*cr
+       }
+      else if(marks==70.0)
+       {
+      
+          crsum+=cr
+          marksum+= 3.0*cr
+       }
+      else if(marks==69.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.9*cr
+       }
+      else if(marks==68.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.8*cr
+       }
+       
+    else if(marks==67.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.7*cr
+       }
+      else if(marks==66.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.6*cr
+       }
+       
+      else if(marks==65.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.5*cr
+       }
+      else if(marks==64.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.4*cr
+       }
+       
+      else if(marks==63.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.3*cr
+       }
+      else if(marks==62.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.2*cr
+       }
+       
+      else if(marks==61.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.1*cr
+       }
+      else if(marks==60.0)
+       {
+      
+          crsum+=cr
+          marksum+= 2.0*cr
+       }
+       
+      else if(marks==59.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.9*cr
+       }
+      else if(marks==58.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.8*cr
+       }
+       
+      else if(marks==57.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.7*cr
+       }
+       
+      else if(marks==56.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.6*cr
+       }
+      else if(marks==55.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.5*cr
+       }
+      else if(marks==54.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.4*cr
+       }
+       
+      else if(marks==53.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.3*cr
+       }
+       
+      else if(marks==52.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.2*cr
+       }
+      else if(marks==51.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.1*cr
+       }
+       
+      else if(marks==50.0)
+       {
+      
+          crsum+=cr
+          marksum+= 1.0*cr
+       }
+       else
+       {
+      
+          crsum+=cr
+          marksum+= 0.0*cr
+       }
+       }
+       
+       println("Your gpa = ${marksum / crsum }")
+       
+}
