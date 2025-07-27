@@ -1,0 +1,13 @@
+fun main() 
+{
+  var name : String = "BAYYAT"
+  var num : Int = name.length
+   var reverse : String = " "
+   for (i in num downTo 0)
+   {
+   reverse +=name[i]
+   }
+   
+   println("Revered string = $reverse")
+  
+}
