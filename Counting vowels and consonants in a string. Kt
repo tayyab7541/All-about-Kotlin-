@@ -1,0 +1,28 @@
+fun main() 
+{
+  var num:String=""
+  print("Enter string = ")
+  num=readLine()!!.toString()
+  var s:Int = 0
+  s=num.length
+  var v:Int=0
+  var c:Int =0
+  for(i in 0..s-1)
+  {
+    if(num[i]=='a'||num[i]=='A'||num[i]=='e'||num[i]=='E'||num[i]=='i'||num[i]=='I'||num[i]=='O'||num[i]=='o'||num[i]=='u'||num[i]=='U')
+    {
+    v++
+    }
+    else if(num[i]==' ')
+    {
+    //if there is space it will use this 
+    }
+    else 
+    {
+    c++
+    }
+  }
+  
+  println("Vowels in given string =$v")
+  println("Consonants in given string = $c")
+}
