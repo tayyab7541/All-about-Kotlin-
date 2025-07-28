@@ -1,0 +1,24 @@
+fun main(args: Array<String>) 
+{
+	var ar = Array(3){ Array(3) {0}}
+    for( i in 0 until 3)
+    {
+    for(j in 0 until 3)
+    {
+    print("Enter number = ")
+    ar[i][j]=readLine()!!.toInt()
+    }
+    }
+    
+    
+   for( i in 0 until 3)
+    {
+    for(j in 0 until 3)
+    {
+    print("${ar[i][j]} \t")
+    }
+    println("")
+    }
+    
+    
+}
