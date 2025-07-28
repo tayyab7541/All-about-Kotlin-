@@ -1,0 +1,20 @@
+fun main()
+{
+var ar = Array(10) {0}
+var size= ar.size-1
+for(i in 0..size)
+{
+print ("Enter ${i+1} number =")
+ar[i]=readLine()!!.toInt()
+}
+for(i in 0..size-1)
+{
+	if(ar[i+1]-ar[i]>1)
+    {
+    for(m in ar[i]+1 until ar[i+1]) // printing missing number 
+    {
+    println(" $m is missing")
+    }
+    }
+}
+}
