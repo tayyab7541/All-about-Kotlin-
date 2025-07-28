@@ -1,0 +1,24 @@
+fun main(args: Array<String>) {
+	var ar= Array(5) {0}
+    for(i in 0..4)
+    {
+    print("Enter ${i+1} element =")
+    ar[i] = readLine()!!.toInt()
+    }
+    var temp:Int =0
+    
+    for(i in 0..4-1)
+    {
+    if(i==0)
+    {
+    temp=ar[i]
+    }
+    ar[i]=ar[i+1]
+    }
+    ar[4]=temp
+    
+   for(i in 0..4)
+    {
+    println("${ar[i]}")
+    }
+}
