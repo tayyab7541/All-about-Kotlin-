@@ -1,0 +1,34 @@
+fun main() 
+{
+ var countOdd:Int = 0
+ var countEven:Int =0
+var ar:Array <Int> = arrayOf(0,0,0,0,0,0,0,0,0,0)
+ var size : Int = ar.size
+ for(i in 0..size-1)
+ {
+  print("Enter ${i+1} number =")
+  ar[i]=readLine()!!.toInt()
+ }
+for(i in 0..size-1)
+ { 
+ if(ar[i]%2==0)
+ {
+ countEven++
+ }
+ else if(ar[i]==0)
+ {
+ continue
+ //this will neglect zero as zero neither even nor odd
+ }
+ else 
+ {
+ countOdd++
+ }
+ 
+ }
+ 
+ println("Number of even digits in array = $countEven")
+ println("Number of odd digits in array = $countOdd")
+ 
+ 
+}
