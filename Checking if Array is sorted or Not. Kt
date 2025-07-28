@@ -1,0 +1,32 @@
+fun main() 
+{
+  var ar= Array(5) {0}
+  var found : Boolean = false
+  var size= ar.size
+  for(i in 0..size-1)
+  {
+  print("Enter ${i+1} element = ")
+  ar[i]=readLine()!!.toInt()
+  }
+   for(i in 0..size-2)
+  {
+  if(ar[i]<ar[i+1])
+  {
+  continue 
+  }
+  else 
+  {
+  found= true
+  break
+  }
+  }
+  if(found)
+  {
+  println("Array is not sorted")
+  }
+  else 
+  {
+  println(" Array is sorted")
+  }
+  
+}
