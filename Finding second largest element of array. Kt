@@ -1,0 +1,30 @@
+fun main(args: Array<String>) 
+{
+
+  var ar= Array(5) {0}
+  var size= ar.size
+  for(i in 0..size-1)
+  {
+  print("Enter ${i+1} number = ")
+  ar[i]=readLine()!!.toInt()
+  }
+  var secondLargest:Int =ar[0]
+  var firstLargest:Int=ar[0]
+  for(i in 0 .. size-1)
+  {
+  if( ar[i]>firstLargest)
+  {
+  firstLargest=ar[i]
+  }
+  }
+  
+  for(i in 0 .. size-1)
+  {
+  if(ar[i]>secondLargest&&ar[i]<firstLargest)
+  {
+  secondLargest=ar[i]
+  }
+  }
+  
+  println("Second Largest of Array = $secondLargest")
+}
