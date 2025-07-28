@@ -1,0 +1,33 @@
+fun main(args: Array<String>) 
+{
+var ar1 : Array<Int> = arrayOf(0,0,0,0,0)
+
+	var size : Int =ar1.size
+    for( i in 0..size-1)
+    {
+      print("Enter ${i+1} number =")
+      ar1[i]=readLine()!!.toInt()
+    }
+    var j:Int =0
+    var ar :Array<Int> = arrayOf(0,0,0,0,0)
+    for( i in size-1 downTo 0)
+    {
+      ar[j]=ar1[i]
+      j++
+    }
+    println("Original Array")
+    
+  for( i in 0..size-1)
+    {
+    print("${ar1[i]} 	")
+    }
+    
+    println("")
+    
+    println("Reversed Array ")
+   for( i in 0..size-1)
+    {
+    print("${ar[i]} 	")
+    }
+    
+}
