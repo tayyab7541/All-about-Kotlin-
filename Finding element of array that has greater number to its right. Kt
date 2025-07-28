@@ -1,0 +1,18 @@
+fun main() 
+{
+ var ar= Array(5) {0}
+ var size= ar.size-1
+ 
+for(i in 0..size)//this loop will input numbers in array
+ {
+ print("Enter ${i+1} number =")
+ ar[i]=readLine()!!.toInt()
+ }
+ for(i in 0..size-1)
+ {
+ if(ar[i]>ar[i+1])
+ {
+ println("${ar[i]}")
+ }
+ }
+ }
