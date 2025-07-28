@@ -1,0 +1,59 @@
+fun main(args: Array<String>)
+ {
+     var r1=3
+     var c1=4
+     var r2=4
+     var c2=3
+    var matrix1=Array(r1){Array(c1){0}}
+    var matrix2 =Array(r2){Array(c2){0}}
+    var product=Array(r1){Array(c2){0}}
+    
+    println("For 1st Matrix")
+    for(i in 0 until r1)
+    {
+    println("For row ${i+1} ")
+     for(j in 0 until c1)
+     {
+     print("Enter number = ")
+     matrix1[i][j]=readLine()!!.toInt()
+     }
+    }
+    
+    println("For 2nd Matrix")
+    for(i in 0 until r2)
+    {
+    println("For row ${i+1} ")
+     for(j in 0 until c2)
+     {
+     print("Enter number = ")
+     matrix2[i][j]=readLine()!!.toInt()
+     }
+    }
+    
+    if(c1==r2)
+    {
+    
+   for(i in 0 until r1)
+   {
+    for(j in 0 until c2)
+    {
+      for(k in 0 until c1)
+      {
+      product[i][j]+=matrix1[i][k]*matrix2[k][j]
+      }
+     }
+   }
+   for(j in 0 until r1)
+   {
+   for( k in 0 until c2)
+   {
+   print("${product[j][k]} \t")
+   }
+   println("")
+   }
+    }
+    else 
+    {
+    println("Multiplication is not possible")
+    }
+}
