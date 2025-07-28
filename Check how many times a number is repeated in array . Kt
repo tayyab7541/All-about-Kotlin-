@@ -1,0 +1,34 @@
+fun main() 
+{
+var ar= Array(5) {0}
+var size= ar.size-1
+ 
+ for(i in 0..size)//this loop will input numbers in array
+ {
+ print("Enter ${i+1} number =")
+ ar[i]=readLine()!!.toInt()
+ }
+ 
+ for(i in 0..size) //this loop will repeat size times to find how many times number is repeated 
+ {
+var count=0
+ for(j in 0..size)
+ {
+ if(ar[i]==ar[j])
+ {
+ count++ //this is counter to count number of times 
+ }
+ }
+ var found :Boolean =false
+ for(j in 0..i) // this makes sure if a number is repeated than it will display only one time that the number is repeated for that number of times 
+ {
+ if(ar[i]==ar[j]&&j!=i)
+ {
+ found=true
+ }
+ }
+ if(!found)
+ println("${ar[i]} is repeated $count times")
+ }
+	
+}
