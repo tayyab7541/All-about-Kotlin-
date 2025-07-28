@@ -1,0 +1,32 @@
+fun main()
+{
+  var ar = Array(5) {0}
+  
+for(i in 0..4)
+    {
+    print("Enter ${i+1} element =")
+    ar[i] = readLine()!!.toInt()
+    }
+    
+    var size:Int=ar.size
+   for(i in 0..size-1)
+   {
+     for(k in i+1..size-1)
+     {
+     if(ar[i]==ar[k])
+     {
+        for(j in k..size-2)
+        {
+        ar[j]=ar[j+1]
+         
+        }
+        size--
+     }
+     }
+   }
+   for(i in 0..size-1)
+   {
+   println("${ar[i]}")
+   }
+ 
+}
