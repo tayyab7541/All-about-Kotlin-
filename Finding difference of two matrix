@@ -1,0 +1,61 @@
+fun main(args: Array<String>) 
+{
+     var c1=3
+     var r1=3
+     var c2=3
+     var r2=3
+	var matrix1=Array(r1){Array(c1){0}}
+    var matrix2=Array(r2){Array(c2){0}}
+     
+     println("For first matrix")
+    for( i in 0 until r1)
+    {
+    println("For ${i+1} row")
+    for(j in 0 until c1)
+    {
+    print("Enter number = ")
+    matrix1[i][j]=readLine()!!.toInt()
+    }
+    }
+    println("For second matrix")
+    for( i in 0 until r2)
+    {
+    println("For ${i+1} row")
+    for(j in 0 until c2)
+    {
+    print("Enter number = ")
+    matrix2[i][j]=readLine()!!.toInt()
+    }
+    }
+    
+    var sum=Array(r1){Array(c1){0}}
+    if(r1==r2&&c1==c2)
+    {
+     for( i in 0 until r1)
+    {
+    for(j in 0 until c1)
+    {
+    sum[i][j]=matrix1[i][j]-matrix2[i][j]
+    }
+    }
+    
+    println("Difference of two matrix " )
+     for( i in 0 until r1)
+    {
+    for(j in 0 until c1)
+    {
+      print(" ${sum[i][j]} \t")
+    }
+    println("")
+    }
+    
+    
+    }
+    else
+    {
+    println("Difference is not possible due different order of matrix ")
+    }
+    
+    
+    
+}
