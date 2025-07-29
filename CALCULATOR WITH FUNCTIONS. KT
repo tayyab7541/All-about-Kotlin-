@@ -1,0 +1,59 @@
+fun main() 
+{
+	var num1:Int=0
+    var num2:Int=0
+    var ch:Char?='a'
+    
+    var result:Int=0
+    print("Enter 1st number = " )
+    num1=readLine()!!.toInt()
+    
+    print("Enter 2nd number = " )
+    num2=readLine()!!.toInt()
+    
+    print("Enter operator = ")
+    ch = readLine()?.trim()?.getOrNull(0)
+    
+    if(ch=='+')
+    {
+    result=sum(num1,num2)
+    println("Sum is = $result")
+    }
+    else if(ch=='-')
+    {
+    result=difference (num1,num2)
+    println("Difference is = $result")
+    }
+    else if(ch=='*')
+    {
+    
+    result=product(num1,num2)
+    println("Product is = $result")
+    }
+    else if(ch=='/')
+    {
+    result=division (num1,num2)
+    println("Division is = $result")
+    }
+    else 
+    {
+    println("Invalid operator")
+    }
+}
+
+fun sum(num1:Int,num2:Int):Int
+{
+return num1+num2
+}
+fun difference(num1:Int,num2:Int):Int
+{
+return num1-num2
+}
+fun product(num1:Int,num2:Int):Int
+{
+return num1*num2
+}
+fun division(num1:Int,num2:Int):Int
+{
+return num1/num2
+}
