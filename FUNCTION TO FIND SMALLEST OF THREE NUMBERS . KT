@@ -1,0 +1,36 @@
+fun main() 
+{
+	var num1:Int=0
+    var num2:Int=0
+    var num3:Int=0
+    var result :Int=0
+    print("Enter 1st number =")
+    num1=readLine()!!.toInt()
+    
+    print("Enter 2nd number =")
+    num2=readLine()!!.toInt()
+   
+    print("Enter 3rd number =")
+    num3=readLine()!!.toInt()
+    
+    result =smallest (num1,num2,num3)
+    println("Smallest of three numbers = $result")
+    
+ }
+ 
+ fun smallest (num1:Int,num2:Int,num3:Int):Int
+ {
+ if(num1<num2&&num1<num3)
+ {
+ return num1
+ }
+ else if(num2<num1&&num2<num3)
+ {
+ return num2
+ }
+ else 
+ {
+ return num3
+ }
+ }
+    
