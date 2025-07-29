@@ -1,0 +1,25 @@
+fun main(args: Array<String>) 
+{
+var r=3
+var c=4
+var matrix = Array(r){Array(c) {0}}
+
+	for(i in 0 until r)
+    {
+    println("For row ${i+1} ")
+   for(j in 0 until c)
+   {
+   print("Enter number =")
+   matrix[i][j]=readLine()!!.toInt()
+   }
+    }
+   for(i in 0 until r)
+   { 
+   var sum :Int =0
+  for(j in 0 until c)
+  {
+  sum+= matrix[i][j]
+  }
+  println("Sum of row ${i+1} =$sum")
+   }
+}
