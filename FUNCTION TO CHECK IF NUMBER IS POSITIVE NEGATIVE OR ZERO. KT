@@ -1,0 +1,40 @@
+fun main() 
+{
+	var num1:Int=0
+    var result:Int =0
+    print("Enter number =")
+    num1=readLine()!!.toInt()
+    result=check(num1)
+    if(result==1)
+    {
+    println("Number is +ve")
+    }
+    else if(result==0)
+   {
+    println("Number is zero")
+   }
+   
+   else
+   {
+  println("Number is -ve")
+   }
+   
+    
+}
+
+fun check(num:Int):Int
+{
+if(num>0)
+{
+return 1
+}
+else if(num==0)
+{
+return 2
+}
+
+else 
+{
+return 3
+}
+}
