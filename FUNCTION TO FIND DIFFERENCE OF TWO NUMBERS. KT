@@ -1,0 +1,20 @@
+fun main() 
+{
+	var num1:Int=0
+    var num2:Int=0
+    var result :Int=0
+    print("Enter 1st number =")
+    num1=readLine()!!.toInt()
+    
+    print("Enter 2nd number =")
+    num2=readLine()!!.toInt()
+    result =difference (num1,num2)
+    println("Difference of two numbers = $result")
+    
+ }
+ 
+ fun difference (num1:Int,num2:Int):Int
+ {
+ return num1-num2
+ }
+    
