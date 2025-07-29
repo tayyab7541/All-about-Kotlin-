@@ -1,0 +1,55 @@
+fun main(args: Array<String>) 
+{
+	var r=3
+    var c=4
+    var matrix=Array(r){Array(c){0}}
+    
+    for(j in 0 until r)
+    {
+    println("For row ${j+1} =")
+    
+    for(k in 0 until c)
+    {
+    print("Enter number = ")
+    matrix[j][k]=readLine()!!.toInt()
+    }
+    }
+   
+    println("Original matrix")
+    
+      for(j in 0 until r)
+    {
+       for(k in 0 until c)
+    {
+    print("${matrix[j][k]} \t")
+    }
+    println("")
+    }
+   print("Enter number to search =")
+   var search= readLine()!!.toInt()
+   var cs=0
+   var rs=0
+    var found:Boolean =false
+      for(j in 0 until r)
+    {
+       for(k in 0 until c)
+    {
+    if(matrix[j][k]==search)
+    {
+       cs=j
+       rs=k
+       found=true
+       break
+    }
+    }
+    }
+    
+    if(found)
+    {
+    println("Number is found at index=[$rs][$cs]")
+    }
+    else
+    {
+    print(" Number not found ")
+    }
+}
