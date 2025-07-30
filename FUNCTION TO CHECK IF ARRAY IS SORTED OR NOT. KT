@@ -1,0 +1,44 @@
+fun main() 
+{
+var ar=Array(5){0}
+var size=ar.size
+input(ar,size)
+checkSorting(ar,size)
+	
+}
+
+fun input(ar:Array<Int>,s:Int)
+{
+  for(k in 0 until s)
+  {
+  print("Enter ${k+1} number =")
+  ar[k]= readLine()!!.toInt()
+  }
+}
+
+fun checkSorting(ar:Array<Int>,s:Int)
+{
+var found:Boolean= false
+ for(j in 0 until s-1)
+ {
+ if(ar[j]<ar[j+1])
+ {
+ //this will check sorting
+ }
+ else 
+ {
+ found =true
+ break
+ }
+ }
+ 
+ if(found)
+ {
+ println("Array is not sorted ")
+ 
+ }
+ else
+ {
+ println("Array is sorted")
+ }
+}
