@@ -1,0 +1,70 @@
+fun main(args: Array<String>) 
+ {   
+  var r:Int=0
+  var c:Int=0
+	print("Enter number of rows = ")
+    r=readLine()!!.toInt()
+    print("Enter number of columns = ")
+    c=readLine()!!.toInt()
+    var matrix =Array(r){Array(c){0}}
+    input(matrix,r,c)//this function is used to input elements in matrix
+    matrixDisplay(matrix,r,c)
+   sum_of_upper_diagonal_Lower_diagonal_Diagonal_Elements(matrix,r,c)
+    
+    
+}
+
+fun input(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+ for(i in 0 until r)
+ {
+ println("For row ${i+1} = ")
+ for(j in 0 until c)
+ {
+ print("Enter number = ")
+ matrix[i][j]=readLine()!!.toInt()
+ }
+ }
+}
+
+fun sum_of_upper_diagonal_Lower_diagonal_Diagonal_Elements(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+var sum =0
+var sum1=0
+var sum2=0
+for(i in 0 until r)
+{
+for(k in 0 until c)
+{
+ if(k>i)
+ {
+ sum+=matrix[i][k]
+ }
+ else if(i>k)
+ {
+ sum1+=matrix[i][k]
+ }
+ else
+ {
+ sum2+= matrix[i][k]
+ }
+}
+}
+
+println("Sum of upper Diagonal = $sum")
+println("Sum of Lower Diagonal = $sum1")
+println("Sum of Diagonal = $sum2")
+}
+
+fun matrixDisplay(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+for(i in 0 until r)
+{
+for(j in 0 until c)
+{
+print("${matrix[i][j]} 	")
+}
+println("")
+}
+}
+
