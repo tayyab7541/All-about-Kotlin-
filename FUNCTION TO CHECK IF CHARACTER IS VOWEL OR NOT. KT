@@ -1,0 +1,38 @@
+fun main() 
+{   
+     var ch : Char? = 'a'
+	println("Enter character = ")
+    ch= readLine()?.trim()?.getOrNull(0)
+    
+    var found:Boolean=false
+    if(ch==null)
+    {
+    print("Invalid input")
+    return
+    }
+    else
+    {
+    found=vowelCheck(ch)
+    if(found)
+    {
+    println("$ch it is vowel")
+    }
+    else 
+    {
+    println("$ch it is consonent")
+    }
+    }
+    
+}
+
+fun vowelCheck(ch:Char):Boolean
+{
+if(ch=='a'||ch=='A'||ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U')
+{
+return true 
+}
+else 
+{
+return false
+}
+}
