@@ -1,0 +1,46 @@
+fun main() 
+{
+var ar =Array(5){0}
+var size=ar.size
+input(ar,size)
+countNumber(ar,size)
+}
+
+fun input(ar:Array<Int>,s:Int)
+{
+for(k in 0 until s)
+{
+print("Enter ${k+1} number =")
+ar[k]= readLine()!!.toInt()
+}
+}
+
+fun countNumber(ar:Array<Int>,size:Int)
+{
+
+for(i in 0 until size)
+{
+var count=1
+for(j in 0 until size)
+{
+ if(ar[i]==ar[j]&& i!=j)
+ {
+ count++
+ }
+}
+var found : Boolean = true
+
+for(k in 0 until i)
+{
+if(ar[k]==ar[i]&&k!=i)
+{
+found=false
+}
+}
+
+if(found)
+{
+println("${ar[i]} is repeated for ${count} times")
+}
+}
+}
