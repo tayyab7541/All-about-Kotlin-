@@ -1,0 +1,68 @@
+fun main()
+{
+  var r:Int=0
+  var c:Int=0
+	print("Enter number of rows = ")
+    r=readLine()!!.toInt()
+    print("Enter number of columns = ")
+    c=readLine()!!.toInt()
+    
+    var matrix =Array(r){Array(c){0}}
+    input(matrix,r,c)
+    matrixDisplay(matrix,r,c)
+    columWiseSum(matrix,r,c)
+    rowWiseSum(matrix,r,c)
+}
+
+fun input(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+for(i in 0 until r)
+{ 
+println("For row ${i+1}")
+for(j in 0 until c)
+{
+ print("Enter number = ")
+ matrix[i][j]=readLine()!!.toInt()
+}
+}
+}
+
+fun columWiseSum(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+ var sum =0
+ for( i in 0 until c)
+ {
+ sum=0
+ for(k in 0 until r)
+ {
+ sum+=matrix[k][i]
+ }
+ println("Sum of ${i+1} column = $sum")
+ }
+}
+
+fun rowWiseSum(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+var sum=0
+for(i in 0 until r)
+{
+sum=0
+for(j in 0 until c)
+{
+ sum += matrix[i][j]
+}
+println("Sum of ${i+1} row = $sum")
+}
+}
+
+fun matrixDisplay(matrix:Array<Array<Int>>,r:Int,c:Int)
+{
+for(i in 0 until r)
+{
+for(j in 0 until c)
+{
+print("${matrix[i][j]} 	")
+}
+println("")
+}
+}
