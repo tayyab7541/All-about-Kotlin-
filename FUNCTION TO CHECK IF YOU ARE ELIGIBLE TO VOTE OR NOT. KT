@@ -1,0 +1,20 @@
+fun main(args: Array<String>) 
+{ 
+     var age:Int = 0
+	print("Hello, Enter your age = ")
+    age = readLine()!!.toInt()
+    voterStatus(age)
+    
+}
+
+fun voterStatus(age:Int)
+{
+if(age>=18)
+{
+ print("Great be careful to vote as you are eligible to vote ")
+}
+else
+{
+println("Don't take care you are not eligible to vote ")
+}
+}
