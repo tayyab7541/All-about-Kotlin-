@@ -1,0 +1,29 @@
+fun main() {
+	print("Enter year = ")
+    var year=readLine()!!.toInt()
+    var check:Boolean=false
+    check=leapCheck(year)
+    if(check)
+    {
+    println("This is a leap year")
+    }
+    else
+    {
+    println("This is not leap year")
+    
+    }
+    
+}
+
+
+fun leapCheck(year:Int): Boolean 
+{
+if(year%4==0&&year%400!=0||year%100==0)
+{
+return true
+}
+else 
+{
+return false
+}
+}
