@@ -4,12 +4,12 @@ fun main()
     var guess=0
     var found=false
     println("You only have 5 chances to guess the number in range of 0 to 20 \n")
-    for(i in 1..5)
+    for(i in 1..10)
     {
         print("Enter Guessing number = ")
         guess=readLine()!!.toInt()
-
-        if(num.random()==guess)
+        var c=num.random()
+        if(c==guess)
         {
             println("Your guess is correct ")
             found=true
@@ -17,7 +17,7 @@ fun main()
         }
         else
         {
-            println("No, enter number again ")
+            println("No number was $c , enter number again ")
         }
     }
 
