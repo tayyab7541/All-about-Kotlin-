@@ -1,0 +1,53 @@
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.DEFAULT_CONCURRENCY
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlin.concurrent.thread
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.job
+
+
+fun main() {
+
+    var num: Int
+    do {
+        print("Enter number = ")
+        num=readLine()?.toIntOrNull()?:0
+        if(num<=0)
+        {
+            println("Enter number greater than 0 ")
+        }
+    }while(num<=0)
+
+    val job= CoroutineScope(Dispatchers.Default).launch {
+
+        val job1=async {
+            getsum(1,num)
+        }
+        job1.join()
+        val job2=async {
+            getsum(num+1,2*num)
+        }
+        job2.join()
+
+        var sum=job1.await()+job2.await()
+
+        println("Total sum = $sum")
+    }
+    runBlocking {
+        job.join()
+    }
+}
+
+private suspend fun getsum(i:Int,end:Int):Int
+{
+    var sum=0
+    for(j in i..end)
+    {
+        sum+=j
+    }
+    return sum
+}
